@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.pyg": true,
+        "**/*.toc": true,
+        "**/*.dvi": true,
+        "**/*.gz": true,
+        "**/*.fdb*": true,
+        "**/*.pyc": true,
+        "**/*.log": true,
+        "**/_minted-essay": true,
+    }
+}

@@ -1,0 +1,25 @@
+\section{Naive Implementierung}
+Im folgenden beschäftigen wir uns mit einer naiven
+Implementierung der Fibonacci-Folge mit Python.
+Diese soll wie auch die mathematische Definition rekursiv geschrieben werden.
+Als Editor wird VS Code mit Python Plugin verwendet.
+Die Schwierigkeit der Implementierung besteht in den
+ersten 2 Folgen da diese noch nicht der üblichen Logik folgen.
+Daher ist für diese zwei Werte eine Grenzfallbehandlung
+zu Implementieren. Dies wurde mithilfe einer \textit{if-else}
+Anweisung in der Rückgabeanweisung umgesetzt:
+\begin{mdframed}[backgroundcolor=bg]
+    \inputminted{Python}{src/naive_fibonacci.py}
+\end{mdframed}
+Beim Aufruf der Funktion kommen folgende Outputs zustande:
+\begin{mdframed}[backgroundcolor=bg]
+    \inputminted{Python}{src/naive_fibonacci_test.py}
+\end{mdframed}
+Durch die oben durchgeführten \textit{print} Tests konnte
+zudem die maximale Rekursionstiefe, die Python standardmässig
+gesetzt hat, ermittelt werden. 
+Diese liegt bei 1000. 
+Wir werden diese Implementierung nun
+auf verschiedene Arten analysieren um mehr über das 
+Verhalten der Funktion beim Aufruf zu erfahren.
+

@@ -7,3 +7,5 @@
 *.pyg
 *.dvi
 *.toc
+**/_minted-essay
+*.pyc
