@@ -3,6 +3,7 @@
 *.fls
 *.aux
 *.fdb*
-*.pdf
+*/*.pdf
 *.pyg
 *.dvi
+*.toc

@@ -1,54 +1,83 @@
 \documentclass[12pt]{article}
+\usepackage[a4paper, total={6in, 8in}, margin=1.1in]{geometry}
 \usepackage{lingmacros}
 \usepackage{tree-dvips}
 \usepackage{listings}
+\usepackage{blindtext}
+\usepackage{amsmath}
+
+\title{Semesterarbeit Teil 1: Rekursion mit Python anhand der Fibonacci-Folge}
+\date{Februar, 2020}
+\author{Patrick Michel\\
+FFHS - Fernfachhochschule Schweiz\\
+6. Semester AnPy\thanks{AnPy, Analysis mit Python, BSc INF 2017 Pas, BE1-I, FS20, Geuss Markus}
+}
+
+\renewcommand{\contentsname}{Inhalt}
 
 \begin{document}
 
-\section*{Notes for My Paper}
+\begin{titlepage}
 
-\lstinputlisting[language=Python]{src/simple_fibonacci.py}
+\maketitle
+\tableofcontents
 
+\end{titlepage}
+
+
+\section{Einleitung}
+Die folgende Arbeit befasst sich mit der Fibonacci-Folge. 
+Dabei handelt es sich um eine unendliche Reihe von natürlichen Zahlen.
+Die Folge ist benannt nach Leonardo Fibonacci, 
+der damit im 1300 Jahrhunder das Wachstum einer Kaninchenpopulation zu beschreiben versuchte.
+Heute wird die Zahlenfolge in einer abgewandelter Form zum Beispiel auch
+in der agilen Welt zur Schätzung von Arbeitsaufwänden verwendet (Story Points).
+Die Zahlenfolge beginnt üblicherweise mit einer 0.
+Darauf folgend zwei mal die 1 und danach wird die Folge nachvollziehbar.
+Nachfolgend zur Nachvollziehbarkeit die definition der ersten 5 Folgen:
 \begin{equation}
-  f(x) = x^2
+  f_0 := 0,
+  f_1 := 1,
+  f_2 := 1,
+  f_3 := 2,
+  f_4 := 3
 \end{equation}
+Daraus ergbit sich folgende allgemeine Definition:
+\begin{equation}
+  f_n := f_{n-1} + f_{n-2} \text{ für } n \ge 2
+\end{equation}
+Auf Basis dieser Definition sollen nun folgende Aufgaben
+erledigt werden:
+\begin{enumerate}
+  \item Implementieren Sie eine Python-Funktion \textit{fib(n)}, die die n-te Fibonacci-Zahl bestimmt.
+  \item Eine naive Implementierung setzt die obige Rekursionsgleichung direkt um. Schreiben Sie eine weitere Python-Funktion, die berechnet, wie viele Funktionsaufrufe on fib notwendig sind, um die n-te Fibonacci-Zahl zu berechnen.
+  \item Vergleichen Sie die Anzahl der Funktionsaufrufe von fib zur Bestimmung einer Fibonacci-Zahl mit den Fibonacci-Zahlen selber. Können Sie eine Vermutung aufstellen?
+  \item Verwenden Sie die Funktion \textit{time()} aus dem Modul time, um zu bestimmen, wie lange die Funktion fib benötigt, um eine Fibonacci-Zahl zu bestimmen.
+  \item Implementieren Sie eine weitere Python-Funktion zur Berechnung der n-ten Fibonacci-Zahl, die möglichst effizient ist. (Hinweis: das kann rekursiv oder iterativ gelöst werden.)
+\end{enumerate}
+\subsection{Abstract}
 
-Don't forget to include examples of topicalization.
-They look like this:
+\newpage
 
-{\small
-\enumsentence{Topicalization from sentential subject:\\ 
-\shortex{7}{a John$_i$ [a & kltukl & [el & 
-  {\bf l-}oltoir & er & ngii$_i$ & a Mary]]}
-{ & {\bf R-}clear & {\sc comp} & 
-  {\bf IR}.{\sc 3s}-love   & P & him & }
-{John, (it's) clear that Mary loves (him).}}
-}
+\section{Lösungsansatz}
 
-\subsection*{How to handle topicalization}
+\blindtext
 
-I'll just assume a tree structure like (\ex{1}).
+\section{Naive Implementierung}
+Im folgenden beschäftigen wir uns mit einer naiven
+Implementierung der Fibonacci-Folge mit Python.
+Diese soll wie auch die mathematische Definition rekursiv geschrieben werden.
+Als Editor wird VS Code mit Python Plugin verwendet. 
+\lstinputlisting[language=Python]{src/simple_fibonacci.py}
+\blindtext
 
-{\small
-\enumsentence{Structure of A$'$ Projections:\\ [2ex]
-\begin{tabular}[t]{cccc}
-    & \node{i}{CP}\\ [2ex]
-    \node{ii}{Spec} &   &\node{iii}{C$'$}\\ [2ex]
-        &\node{iv}{C} & & \node{v}{SAgrP}
-\end{tabular}
-\nodeconnect{i}{ii}
-\nodeconnect{i}{iii}
-\nodeconnect{iii}{iv}
-\nodeconnect{iii}{v}
-}
-}
+\section{Ergebnisse}
+\blindtext
 
-\subsection*{Mood}
+\section{Diskussion / Interpretation}
+\blindtext
 
-Mood changes when there is a topic, as well as when
-there is WH-movement.  \emph{Irrealis} is the mood when
-there is a non-subject topic or WH-phrase in Comp.
-\emph{Realis} is the mood when there is a subject topic
-or WH-phrase.
+\section{Quellen}
+\blindtext
 
 \end{document}

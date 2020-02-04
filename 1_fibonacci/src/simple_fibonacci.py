@@ -1,19 +1,12 @@
-def fib(n):
-    # Repraesentiert fn-1
-    fi = 1
-    # Repraesentiert fn-2
-    fiPrev = 0
-    # Pseudo Fibonacci Zahl 0
+def fib(n, fiPrev = 0, fi = 1):
+    if fiPrev == 0:
+        if n > 0:
+            n -= 1
+        else:
+            return fiPrev
     if n == 0:
-        return fiPrev
-    # Berechnet fiNext aus fi & fiPrev
-    for i in range(1, n):
-        fiNext = fi + fiPrev
-        fiPrev = fi
-        fi = fiNext
-        pass
-    # Gibt die endgueltige Fibonacci Zahl zurueck
-    return fi
+        return fi
+    return fib(n - 1, fi, fi + fiPrev)
     pass
 
 # Output: 0
