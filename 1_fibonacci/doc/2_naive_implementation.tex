@@ -2,7 +2,8 @@
 Im folgenden beschäftigen wir uns mit einer naiven
 Implementierung der Fibonacci-Folge mit Python.
 Diese soll wie auch die mathematische Definition rekursiv geschrieben werden.
-Als Editor wird VS Code mit Python Plugin verwendet.
+\subsection{Der Algorithmus}
+Als Editor wird VS Code mit dem Python Plugin verwendet.
 Die Schwierigkeit der Implementierung besteht in den
 ersten 2 Folgen da diese noch nicht der üblichen Logik folgen.
 Daher ist für diese zwei Werte eine Grenzfallbehandlung
@@ -19,7 +20,9 @@ Durch die oben durchgeführten \textit{print} Tests konnte
 zudem die maximale Rekursionstiefe, die Python standardmässig
 gesetzt hat, ermittelt werden. 
 Diese liegt bei 1000. 
-Wir werden diese Implementierung nun
-auf verschiedene Arten analysieren um mehr über das 
-Verhalten der Funktion beim Aufruf zu erfahren.
+Weiter kann durch die Analyse des Codes folgende
+Laufzeit des Algorithmus definiert werden:
+\begin{equation}
+    \mathcal{O}(n + 1)
+\end{equation}
 

@@ -9,4 +9,3 @@ def count_rec(fiCheck):
         elif fi == fiCheck:
             return n
         n += 1
-        pass

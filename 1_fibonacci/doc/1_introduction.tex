@@ -1,13 +1,16 @@
 \section{Einleitung}
-Die folgende Arbeit befasst sich mit der Fibonacci-Folge. 
-Dabei handelt es sich um eine unendliche Reihe von natürlichen Zahlen.
+Die folgende Arbeit befasst sich mit der Fibonacci-Folge.
+Als Hauptinstrument zur Untersuchung wird die Programmiersprache
+Python (3.7.x) verwendet.
+\subsection{Geschichte}
+Bei der Fibonacci-Folge handelt es sich um eine unendliche Reihe von natürlichen Zahlen.
 Die Folge ist benannt nach Leonardo Fibonacci, 
 der damit im 1300 Jahrhunder das Wachstum einer Kaninchenpopulation zu beschreiben versuchte.
 Heute wird die Zahlenfolge in einer abgewandelter Form zum Beispiel auch
 in der agilen Welt zur Schätzung von Arbeitsaufwänden verwendet (Story Points).
 Die Zahlenfolge beginnt üblicherweise mit einer 0.
 Darauf folgend zwei mal die 1 und danach wird die Folge nachvollziehbar.
-Nachfolgend zur Nachvollziehbarkeit die definition der ersten 5 Folgen:
+Zur Nachvollziehbarkeit die definition der ersten 5 Folgen:
 \begin{equation}
   f_0 := 0,
   f_1 := 1,
@@ -19,6 +22,7 @@ Daraus ergibt sich folgende allgemeine Definition:
 \begin{equation}
   f_n := f_{n-1} + f_{n-2} \text{ für } n \ge 2
 \end{equation}
+\subsection{Aufgaben}
 Auf Basis dieser Definition sollen nun folgende Aufgaben
 erledigt werden:
 \begin{enumerate}
@@ -28,4 +32,3 @@ erledigt werden:
   \item Verwenden Sie die Funktion \textit{time()} aus dem Modul time, um zu bestimmen, wie lange die Funktion fib benötigt, um eine Fibonacci-Zahl zu bestimmen.
   \item Implementieren Sie eine weitere Python-Funktion zur Berechnung der n-ten Fibonacci-Zahl, die möglichst effizient ist. (Hinweis: das kann rekursiv oder iterativ gelöst werden.)
 \end{enumerate}
-\subsection{Abstract}
