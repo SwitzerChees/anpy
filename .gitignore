@@ -9,3 +9,6 @@
 *.toc
 **/_minted-essay
 *.pyc
+*.zip
+.DS_Store
+*.out

@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,  a4paper, ngerman]{article}
 \usepackage[a4paper, total={6in, 8in}, margin=1.1in]{geometry}
 \usepackage[default,scale=0.95]{opensans}
 \usepackage[section]{minted}
@@ -8,13 +8,24 @@
 \usepackage{listings}
 \usepackage{blindtext}
 \usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 
 \renewcommand\seriesdefault{l}
 \renewcommand\mddefault{l}
 \renewcommand\bfdefault{sb}
 \renewcommand{\contentsname}{Inhalt}
+\renewcommand{\refname}{Literaturverzeichnis}
 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=cyan
+}
 
 \title{Semesterarbeit Teil 1: Rekursion mit Python anhand der Fibonacci-Folge}
 \date{Februar, 2020}
@@ -49,14 +60,20 @@ FFHS - Fernfachhochschule Schweiz\\
 \include{doc/4_compare_fibonacci}
 
 \newpage
+\include{doc/5_optimization}
 
-\section{Ergebnisse}
-\blindtext
-
-\section{Diskussion / Interpretation}
-\blindtext
+\newpage
+\include{doc/6_results}
 
 \section{Quellen}
-\blindtext
+
+\begin{thebibliography}{quellen}
+         
+    \bibitem{python_max_rec} 
+    Python maximales Rekursionslimit,\\
+    \texttt{\url{https://stackoverflow.com/questions/3323001/what-is-the-maximum-recursion-depth-in-python-and-how-to-increase-it}},\\
+    05.02.2020
+    \end{thebibliography}
+
 
 \end{document}

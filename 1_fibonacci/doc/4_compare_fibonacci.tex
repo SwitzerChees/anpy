@@ -1,4 +1,4 @@
-\subsection{Rekursionstiefe und Fibonacci-Folge im Vergleich}
+\subsection{Rekursionstiefe und Fibonacci-Folge}
 Der folgende Abschnitt beschäftigt sich mit der Rekursionstiefe
 der zuvor beschriebenen Implementation. Das bedeutet die
 folgende Implementation ermöglicht es herauszufinden wieviele
@@ -14,8 +14,8 @@ Beim Aufruf der Funktion kommen folgende Outputs zustande:
 Was auf den ersten Blick auffällt ist das geringe Wachstum 
 der rekursiven Aufrufe im Vergleich zu den hohen Fibonacci-Folgen
 welche daraus generiert werden kann. Die obige Implementation
-zur Ermittlung der Rekursiontiefe gehört zu folgender 
+zur Ermittlung der Rekursiontiefe gehört ungefähr folgender 
 Gruppe der Laufzeitkomplexität:
 \begin{equation}
-    \mathcal{O}(n^2 + 1)
+    \mathcal{O}(n*n^2 + 1)
 \end{equation}

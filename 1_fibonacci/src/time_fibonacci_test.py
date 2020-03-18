@@ -1,14 +1,29 @@
 from time_fibonacci import *
+import matplotlib.pyplot as plt
+import sys
+sys.setrecursionlimit(3100)
 
-# Output: 1
-print(time_fib(1))
-# Output: 4
-print(time_fib(10))
-# Output: 8
-print(time_fib(50))
-# Output: 10
-print(time_fib(100))
-# Output: 10
-print(time_fib(500))
-# Output: 10
-print(time_fib(900))
+# Fibonacci Zahlen zum testen
+fibTest = [1, 10, 50, 100, 500, 900, 1800, 3000]
+
+# Beschriftungen für den Chart X,Y Achse
+plt.ylabel('Time')
+plt.xlabel('Fib')
+
+# Berechnung der rekursiven Resultate
+results = []
+for fib in fibTest:
+    results.append(time_fib(fib))
+    
+# Darstellung des Diagramms
+plt.plot(fibTest, results)
+plt.show()
+
+# Berechnung der iterativen Resultate
+results = []
+for fib in fibTest:
+    results.append(time_fib_iter(fib))
+    
+# Darstellung des Diagramms
+plt.plot(fibTest, results)
+plt.show()

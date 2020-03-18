@@ -1,0 +1,28 @@
+\section{Optimierung der Funktion}
+Der folgende Abschnitt beschäftigt sich mit der 
+Optimierung der zuvor beschriebenen rekursiven
+Implementation. Dafür wurden zwei Optimierungen vorgenommen.
+Die erste Optimierung ist eine Cachliste welche alle bereits
+berechneten Resultate zwischenspeichert. Eine weitere
+Optimierung ist eine iterative Implementation.
+Dadurch können viel höhere Finonacci Zahlen berechnet werden
+und diese stossen nie auf eine Funktionsaufruflimitte.
+Auch wird dadurch viel weniger Overhead auf dem Stack generiert:
+\begin{mdframed}[backgroundcolor=bg]
+    \inputminted{Python}{src/advanced_fibonacci.py}
+\end{mdframed}
+
+\newpage
+
+Beim Aufruf der Funktion kommen folgende Outputs zustande:
+\begin{mdframed}[backgroundcolor=bg]
+    \inputminted{Python}{src/advanced_fibonacci_test.py}
+\end{mdframed}
+Was nun beim Test auffällt ist bei der 999. Fibonacci-Zahl
+kommt kein Fehler mehr. Und wenn nun die Funktion mehrfach
+für die gleiche Fibonacci-Zahl aufgerufen wird,
+kommt das Resultat ohne grosse Berechnung direkt aus dem
+Cache mit einer Laufzeitkomplexität von:
+\begin{equation}
+    \mathcal{O}(n)
+\end{equation}
