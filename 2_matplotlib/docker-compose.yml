@@ -1,0 +1,17 @@
+
+version: "3.1"
+
+services:
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyter
+    ports:
+      - 8888:8888
+    networks:
+      - jupyter
+    volumes:
+    - ./notebook:/home/jovyan/work
+
+networks:
+  jupyter:
+    driver: bridge
